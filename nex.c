@@ -73,8 +73,8 @@ int main(int argc, char **argv) {
 
     if (argc != 2) { error("nex", "expects a filename as input"); }
     if (argv[1][0] == '-') {
-        if (argv[1][1] == 'v') { ok("nex", version "\n"); }
-        if (argv[1][1] == 'h') { ok("nex", "\n    nex (filename)      opens and edits a file in hex"); }
+        if (argv[1][1] == 'v') { ok("nex", version "\n"); exit(0); }
+        if (argv[1][1] == 'h') { ok("nex", "\n    nex (filename)      opens and edits a file in hex"); exit(0); }
     }
     char *filename = argv[1];
     buffer = malloc(sizeof(char)*initsize); buffersize = initsize;
